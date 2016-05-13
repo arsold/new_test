@@ -11,19 +11,66 @@
         "owner": {
             "properties": {
                 "element": {"#": "main"},
+                "classList": {
+                    "type": "set",
+                    "values": {
+                        "0": ""
+                    }
+                },
                 "contenteditable": "true",
                 "dir": "ltr",
                 "draggable": "true"
             }
         },
+        "contentArea": {
+            "prototype": "montage/ui/slot.reel",
+            "properties": {
+                "element": {"#": "contentArea"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true"
+            }
+        },
+        "footArea": {
+            "prototype": "montage/ui/slot.reel",
+            "properties": {
+                "element": {"#": "footArea"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true"
+            }
+        },
+        "slot": {
+            "prototype": "montage/ui/slot.reel",
+            "properties": {
+                "element": {"#": "slot"}
+            }
+        },
         "textField": {
             "prototype": "montage/ui/text-field.reel",
             "properties": {
-                "element": {"#": "textField"},
                 "contenteditable": "true",
                 "dir": "ltr",
                 "draggable": "true",
                 "value": "Text"
+            }
+        },
+        "topArea": {
+            "prototype": "montage/ui/slot.reel",
+            "properties": {
+                "element": {"#": "topArea"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true"
+            }
+        },
+        "treeMenu": {
+            "prototype": "montage/ui/slot.reel",
+            "properties": {
+                "element": {"#": "treeMenu"},
+                "contenteditable": "true",
+                "dir": "ltr",
+                "draggable": "true"
             }
         }
     }
@@ -31,7 +78,13 @@
 </head>
 <body>
     <div data-montage-id="main" data-montage-skin="light" class="Main">
-        <input data-montage-id="textField" type="text">
+        <div data-montage-id="topArea"></div>
+        <div data-montage-id="contentArea">
+            <div data-montage-id="treeMenu">
+
+            </div>
+        </div>
+        <div data-montage-id="footArea"></div>
     </div>
 </body>
 </html>
