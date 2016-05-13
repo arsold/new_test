@@ -23,7 +23,10 @@
             }
         },
         "content": {
-            "prototype": "montage/ui/slot.reel"
+            "prototype": "montage/ui/slot.reel",
+            "properties": {
+                "element": {"#": "content"}
+            }
         },
         "contentArea": {
             "prototype": "montage/ui/slot.reel",
@@ -41,21 +44,6 @@
                 "contenteditable": "true",
                 "dir": "ltr",
                 "draggable": "true"
-            }
-        },
-        "slot": {
-            "prototype": "montage/ui/slot.reel",
-            "properties": {
-                "element": {"#": "slot"}
-            }
-        },
-        "textField": {
-            "prototype": "montage/ui/text-field.reel",
-            "properties": {
-                "contenteditable": "true",
-                "dir": "ltr",
-                "draggable": "true",
-                "value": "Text"
             }
         },
         "topArea": {
@@ -84,8 +72,9 @@
         <div data-montage-id="topArea"></div>
         <div data-montage-id="contentArea">
             <div data-montage-id="treeMenu">
-                <div data-montage-id="slot"></div>
+
             </div>
+            <div data-montage-id="content"></div>
         </div>
         <div data-montage-id="footArea"></div>
     </div>
